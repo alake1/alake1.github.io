@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock-Paper-Scissors</title>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="rps.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no" />
+</head>
+<body>
+  
+    <div class="container">
+         <div class="speaker"></div>
+         <audio id="player"><source src="woosh.mp3" type="audio/mp3"></audio>
+         <i class="fa fa-question qn" aria-hidden="true" onclick="explana()"></i><!--<img class="qn" src="style/img/question.png" onclick="explana()">-->
+         <p class="game-explanation">
+    <strong class="important">How to Play:</strong> 
+    </p>
+    <div class="heading">
+               
+      <div class="title-container">
+        <h1 class="title">Rock-Paper-Scissors</h1>
+      </div>
+      <div class="above-game">
+      <p class="game-intro">Scissors cut Paper, Paper covers Rock, Rock crushes Scissors. Fill all the grey boxes with Rocks to win.</p>
+      <a class="restart-button">New Game</a>
+    </div>
+        <div class="scores-container">
+       <!-- <div class="score-container">0</div> -->
+        <div id="timer" class="timer-container">
+        <span id="hour"></span>
+        <span id="min"></span>
+        <span id="sec"></span>
+        </div>
+        <div class="pause-container">
+            <button id="pauseButton" class="pause-button" value="">
+                <span id="pauseimg" class="fa fa-pause-circle" style="cursor: pointer;"></span>
+            </button>
+        </div>
+        <!--
+        <div class="pause-container hidden"><button id="pauseButton" class="pause-button" value="Pause">
+                <img id="pauseimg" src="rounded-pause-button.png" height="35" width="35"/></button>
+        </div>-->
+        <div class="best-container">0</div>
+        </div>
+    </div>
+
+    <div class="game-container-start">
+  
+ <div class="start-screen" id="starts">
+ <div class="slideshow-container">
+<!-- <form id="formz" action="#" onsubmit="return levela(this);"> -->
+<div class="btn-group"  data-toggle="buttons" style="z-index: 200">
+    <div class="mySlides"><button class="btna" id="option1" name="level"/>EASY</div>
+      <div class="mySlides"><button class="btna" id="option1" name="level"/>MEDIUM</div>
+      <div class="mySlides"><button class="btna" id="option1" name="level"/>HARD</div>
+  
+</div>
+  <i class="fa fa-chevron-left prev" aria-hidden="true" onclick="plusSlides(-1)"></i>
+  <i class="fa fa-chevron-right next" aria-hidden="true" onclick="plusSlides(+1)"></i>
+ </div>
+
+     <button class="start-button" id="btna">Start</button> 
+             <div class="grid-start-container">
+              
+        <div class="grid-row">
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+        </div>
+        <div class="grid-row">
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+           <div class="grid-start-cell"></div>
+        </div>
+        <div class="earth-container">
+        <div class="grid-row">
+            <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+        </div>
+        <div class="grid-row">
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+           <div class="grid-start-cell"><img class="exampl" src="style/img/2.jpg"></div>
+        </div>
+         </div>
+      </div>
+     
+          
+       </div> 
+        </div>
+      <div class="game-container">
+        <div class="grid-container-screen" id="screen"> </div>
+        
+      <div class="game-message">
+            <p></p>
+        <div class="lower">
+	     <!--   <a class="keep-playing-button">Keep going</a> -->
+          <a class="retry-button">Play Again</a>
+          <br>
+          <div class="score-sharing"></div>
+        </div>
+  </div>
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+          <div class="earth-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+         </div>
+      </div> 
+      <div class="tile-container"></div>
+      
+</div>
+      
+    
+   </div>
+    <script>
+ var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+//  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  //for (i = 0; i < dots.length; i++) {
+  //    dots[i].className = dots[i].className.replace(" active", "");
+  //}
+  slides[slideIndex-1].style.display = "block"; 
+  //dots[slideIndex-1].className += " active";
+}</script>
+<script src="js/levels.js"></script>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/l10n.js"></script>
+  <script src="js/localization.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  
+  <script src="js/game_manager.js"></script>
+  
+ <!--<script src="js/audio.js"></script>
+  <script src="js/application.js"></script> -->
+  
+</body>
+</html>
