@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Rock-Paper-Scissors</title>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="js/jquery-1-12-4.js"></script>
+  <!--<link rel="stylesheet" href="style/font-awesome-min.css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="rps.ico">
@@ -11,10 +12,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/bootstrap-min.js"></script>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <meta name="format-detection" content="telephone=no" />
 </head>
 <body>
@@ -22,7 +23,7 @@
     <div class="container">
          <div class="speaker"></div>
          <audio id="player"><source src="woosh.mp3" type="audio/mp3"></audio>
-         <i class="fa fa-question qn" aria-hidden="true" onclick="explana()"></i><!--<img class="qn" src="style/img/question.png" onclick="explana()">-->
+         <i class="fa fa-question qn" aria-hidden="true" onclick="explana()"></i>
          <p class="game-explanation">
     <strong class="important">How to Play:</strong> 
     </p>
@@ -59,7 +60,6 @@
   
  <div class="start-screen" id="starts">
  <div class="slideshow-container">
-<!-- <form id="formz" action="#" onsubmit="return levela(this);"> -->
 <div class="btn-group"  data-toggle="buttons" style="z-index: 200">
     <div class="mySlides"><button class="btna" id="option1" name="level"/>EASY</div>
       <div class="mySlides"><button class="btna" id="option1" name="level"/>MEDIUM</div>
@@ -100,9 +100,7 @@
         </div>
          </div>
       </div>
-     
-          
-       </div> 
+      </div> 
         </div>
       <div class="game-container">
         <div class="grid-container-screen" id="screen"> </div>
@@ -110,7 +108,6 @@
       <div class="game-message">
             <p></p>
         <div class="lower">
-	     <!--   <a class="keep-playing-button">Keep going</a> -->
           <a class="retry-button">Play Again</a>
           <br>
           <div class="score-sharing"></div>
@@ -147,9 +144,7 @@
       <div class="tile-container"></div>
       
 </div>
-      
-    
-   </div>
+</div>
     <script>
  var slideIndex = 1;
 showSlides(slideIndex);
@@ -165,17 +160,12 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-//  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
   }
-  //for (i = 0; i < dots.length; i++) {
-  //    dots[i].className = dots[i].className.replace(" active", "");
-  //}
-  slides[slideIndex-1].style.display = "block"; 
-  //dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
 }</script>
 <script src="js/levels.js"></script>
   <script src="js/bind_polyfill.js"></script>
@@ -184,16 +174,10 @@ function showSlides(n) {
   <script src="js/l10n.js"></script>
   <script src="js/localization.js"></script>
   <script src="js/keyboard_input_manager.js"></script>
-  
   <script src="js/html_actuator.js"></script>
   <script src="js/grid.js"></script>
   <script src="js/tile.js"></script>
   <script src="js/local_storage_manager.js"></script>
-  
   <script src="js/game_manager.js"></script>
-  
- <!--<script src="js/audio.js"></script>
-  <script src="js/application.js"></script> -->
-  
-</body>
+  </body>
 </html>

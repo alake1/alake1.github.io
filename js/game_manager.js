@@ -71,19 +71,14 @@ var Clock = {
 };
 
 function GameManager(size, timer, InputManager, Actuator, StorageManager) {
-  this.size           = size; // Size of the grid
+  this.size           = size;
   this.inputManager   = new InputManager;
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
-  /* t changes */
-  //this.timer = timer;
   this.timer = 0;
   this.startTiles     = 2;
-/*   this.inputManager.on("crowd", this.crowd.bind(this)); */
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
-  //this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
- // var paused = 0;
   this.setup();
   $('#pauseButton').val('Resume');
   $('#pauseimg').attr("src", 'rounded-pause-button.png');
@@ -98,10 +93,8 @@ if (paused) {
 } else {
   screen.style.display = "none";  
 }
-//var paused = Clock.pause();
 
 $('#pauseButton').click(function () {
-       //$('#pauseButton').val('R')
        var $this = $(this);
        if($this.val()=='Pause'){
 			$this.val('Resume');
@@ -109,7 +102,6 @@ $('#pauseButton').click(function () {
                        // $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
                         Clock.resume();
                         paused = 0;
-                        //console.log(paused);
                         screen.style.display = "none";
 		} else {
 			$this.val('Pause');

@@ -1,5 +1,4 @@
 @import url(fonts/clear-sans.css);
-/* $tile-gold-glow-color: lighten($tile-gold-color, 15%); */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ html, body {
 
 body {
   padding: 80px 0;
- /* background-image: url(img/bg.jpg); */
   background-position: top center;
   background-color: #dd673b;
   background-repeat: no-repeat; }
@@ -28,7 +26,6 @@ body {
 }
 
 .slideshow-container {
-  //max-width: 1000px;
   position: relative;
   margin: auto;
   z-index: 100;
@@ -44,7 +41,6 @@ body {
     margin-top: 100px;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -62,13 +58,11 @@ body {
   padding-bottom: 30px;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   color: rgba(0,0,0,0.8);
 }
@@ -158,7 +152,6 @@ h1.title {
 .best-container, .timer-container {
   overflow: hidden;
   position: relative;
-  /*display: inline-block;*/
   display: none;
   background: #ffa500;
   padding: 15px 0px;
@@ -194,13 +187,7 @@ h1.title {
     font-weight: bold;
     color: rgba(77, 37, 35, 0.9);
     z-index: 100;
-    /*
-    -webkit-animation: move-up 600ms ease-in;
-    -moz-animation: move-up 600ms ease-in;
-    animation: move-up 600ms ease-in;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; */}
+    }
   
 .pause-container {
   position: relative;
@@ -213,7 +200,6 @@ h1.title {
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 5px;
-  /*width: 9%;*/
   float: left; }
 
 .best-container {
@@ -379,8 +365,7 @@ hr {
   position: absolute;
   z-index: 10;
   top: 15px;
-  /*padding: 21px;*/
-}
+  }
 
 .grid-container-screen {
   position: absolute;
@@ -393,9 +378,8 @@ hr {
   width: 470px;
   height: 470px;
   border-radius: 6px;
-  /*display: none;  Hidden by default */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+  background-color: rgba(0,0,0,0.4);}
 
 .start-screen {
   position: absolute;
@@ -408,9 +392,8 @@ hr {
   width: 470px;
   height: 470px;
   border-radius: 6px;
-  /*display: none;  Hidden by default */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+  background-color: rgba(0,0,0,0.4); }
 
 .start-button {
     position: absolute;
@@ -723,7 +706,6 @@ hr {
   margin-top: 5px; }
 
 .restart-button {
-  /*display: inline-block;*/
   display: none;
   background: #491746;
   border-radius: 3px;
@@ -732,7 +714,6 @@ hr {
   color: white;
   height: 40px;
   line-height: 42px;
-  /*display: block; */
   text-align: center;
   margin-right: 20px;
   float: right; }
@@ -774,8 +755,6 @@ hr {
     display: none;
     text-align: center;
     background: gray;
-   // width: 150px;
-   // display: inline;
     margin-left: 69px;
     margin-top: 60px;
 }
@@ -811,20 +790,7 @@ hr {
     text-transform: initial;
     content: " Swipe up, down, left, or right to move the tiles. If two different tiles merge, the weaker tile is replaced by the stronger tile. Similar tiles remain unaffected on meeting."
 }
-  /*  .game-intro {
-    width: 55%;
-    display: block;
-    box-sizing: border-box;
-    line-height: 1;
-    font-size: 10px;
-    margin-top: 10px; }
-  
-  .game-intro {
-  float: left;
-  font-size: 17.5px;
-  line-height: 30px;
-  margin-bottom: 0;
-  margin-top: 5px; } */
+ 
 
   .retry-button {
     width: 42%;
@@ -930,8 +896,7 @@ hr {
     position: absolute;
     z-index: 10;
     top: 10px;
-   /* background: black;*/
-     }
+        }
   
 .grid-container-screen {
   position: absolute;
@@ -944,9 +909,8 @@ hr {
   width: 250px;
   height: 250px;
   border-radius: 6px;
-  /*display: none;  Hidden by default */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}
+  background-color: rgba(0,0,0,0.4); }
 
 .start-screen {
   position: absolute;
@@ -959,9 +923,8 @@ hr {
   width: 260px;
   height: 260px;
   border-radius: 6px;
-  /*display: none;  Hidden by default */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,.2); /* Black w/ opacity */}
+  background-color: rgba(0,0,0,.2); }
   
 .start-button {
     margin: 130px -128px;
@@ -1095,7 +1058,6 @@ hr {
    .best-container, .timer-container {
     overflow: hidden;
     position: relative;
-    /*display: inline-block;*/
     display: none;
     background: #ffa500;
     padding: 15px 0px;
