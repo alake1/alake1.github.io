@@ -228,9 +228,9 @@ GameManager.prototype.prepareTiles = function () {
 
 // Move a tile and its representation
 GameManager.prototype.moveTile = function (tile, cell) {
- console.log(slideIndex);
- console.log(randomnum);
- console.log($('#pauseButton').val());
+ //console.log(slideIndex);
+ //console.log(randomnum);
+ //console.log($('#pauseButton').val());
     if (!paused) {
   this.grid.cells[tile.x][tile.y] = null;
   this.grid.cells[cell.x][cell.y] = tile;
