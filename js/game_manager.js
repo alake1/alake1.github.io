@@ -105,16 +105,16 @@ $('#pauseButton').click(function () {
        var $this = $(this);
        if($this.val()=='Pause'){
 			$this.val('Resume');
-                        $('#pauseimg').attr("src", 'rounded-pause-button.png');
-                       // $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
+                        //$('#pauseimg').attr("src", 'rounded-pause-button.png');
+                        $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
                         Clock.resume();
                         paused = 0;
                         //console.log(paused);
                         screen.style.display = "none";
 		} else {
 			$this.val('Pause');
-                        $('#pauseimg').attr("src", 'rounded-start-button.png');
-                        //$('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
+                        //$('#pauseimg').attr("src", 'rounded-start-button.png');
+                        $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
                         Clock.pause();
                         paused = 1;
                         screen.style.display = "inherit";
@@ -236,7 +236,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
   this.grid.cells[cell.x][cell.y] = tile;
   tile.updatePosition(cell);
   if (audiostatus=='on'){
-      getaudio.load();
+      //getaudio.load();
       getaudio.play();
      // $('.speaker').addClass('speakerplay');
   } else {
@@ -371,7 +371,7 @@ GameManager.prototype.findFarthestPosition = function (cell, vector) {
 };
 
 GameManager.prototype.movesAvailable = function () {
-  return this.grid.cellsAvailable() || this.tileMergeAvailable();
+  return this.grid.cellsAvailable() || this.tileMatchesAvailable();
 };
 
 // Check for available matches between tiles (more expensive check)
@@ -390,7 +390,7 @@ GameManager.prototype.tileMatchesAvailable = function () {
 
           var other  = self.grid.cellContent(cell);
 
-          if (other && other.value === tile.value) {
+          if (other && other.value !== tile.value) {
             return true; // These two tiles can be merged
           }
         }
