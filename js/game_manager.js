@@ -81,7 +81,7 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   this.inputManager.on("restart", this.restart.bind(this));
   this.setup();
   $('#pauseButton').val('Resume');
-  $('#pauseimg').attr("src", 'rounded-pause-button.png');
+  $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
   paused = 0;
   screen.style.display = "none";  
   Clock.start();
@@ -122,7 +122,7 @@ GameManager.prototype.restart = function () {
   this.setup();
   Clock.start();
   $('#pauseButton').val('Resume');
-  $('#pauseimg').attr("src", 'rounded-pause-button.png');
+  $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
   //$('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
   paused = 0;
   screen.style.display = "none";  
