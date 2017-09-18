@@ -35,8 +35,6 @@ body {
     display: none;
     text-align: center;
     background: gray;
-   // width: 150px;
-   // display: inline;
     margin-left: 165px;
     margin-top: 100px;
 }
@@ -105,7 +103,7 @@ h1.title {
   color: #272b33;
   margin: 0;
   display: block;
- // text-align: center; 
+ 
 }
   h1.title small {
     font-size: 60px; }
@@ -338,7 +336,7 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: white;
+      background: #f888a9;
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
@@ -715,7 +713,6 @@ hr {
   height: 40px;
   line-height: 42px;
   text-align: center;
-  margin-right: 20px;
   float: right; }
 
 .game-explanation {
@@ -800,11 +797,11 @@ hr {
     margin-top: 2px; }
   
   .restart-button {
-    width: 42%;
-    padding: 0;
     display: none;
-    box-sizing: border-box;
-    margin-top: 2px; }
+    margin-top: 2px;
+    margin-right: 20px;
+    }
+  
 .game-container-start {
     margin-top: 17px;
     position: relative;
@@ -1141,6 +1138,15 @@ hr {
   left: 230px;
   font-size: 22px;
 }
+
+.game-intro {
+  float: left;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  width: 280px;}
+
 }
 
 
