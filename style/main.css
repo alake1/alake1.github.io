@@ -15,6 +15,7 @@ body {
 
 .btn-group {
   float: left;
+  z-index: 200;
 }
 
 .btna {
@@ -176,6 +177,7 @@ h1.title {
     line-height: 13px;
     text-align: center;
     color: #3c1b1a; }
+  
   .score-container .score-addition, .best-container .score-addition, .score-container {
     position: absolute;
     right: 30px;
@@ -199,6 +201,10 @@ h1.title {
   margin-bottom: 8px;
   margin-left: 5px;
   float: left; }
+
+.pauseimg {
+  cursor: pointer;
+}
 
 .best-container {
   float: right; }
