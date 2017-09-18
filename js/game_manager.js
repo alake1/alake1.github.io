@@ -98,13 +98,15 @@ $('#pauseButton').click(function () {
        var $this = $(this);
        if($this.val()=='Pause'){
 			$this.val('Resume');
-                        $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
+                        $('#pauseimg').addClass("fa-pause-circle");
+                        $('#pauseimg').removeClass("fa-play-circle");
                         Clock.resume();
                         paused = 0;
                         screen.style.display = "none";
 		} else {
 			$this.val('Pause');
-                        $('#pauseimg').toggleClass("fa-play-circle fa-pause-circle");
+                        $('#pauseimg').addClass("fa-play-circle");
+                        $('#pauseimg').removeClass("fa-pause-circle");
                         Clock.pause();
                         paused = 1;
                         screen.style.display = "inherit";
@@ -116,15 +118,21 @@ $('#pauseButton').click(function () {
 GameManager.prototype.restart = function () {
   Clock.stop();
   Clock.totalSeconds = 0;
-  Clock.init();
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
-  this.setup();
-  Clock.start();
+  //this.setup();
+  $(".game-container-start").show();
+  $(".start-screen").show();
+  $(".game-container").hide();
+  this.grid        = new Grid(this.size);
+    this.score       = 0;
+    this.over        = false;
+    this.won         = false;
+    this.keepPlaying = false;
+    this.timer       = 0;
+    this.bestScore   = this.storageManager.getBestScore();
   $('#pauseButton').val('Resume');
-  $('#pauseimg').addClass("fa-pause-circle");
   paused = 0;
-  screen.style.display = "none";  
 };
 
 // Return true if the game is lost, or has won and the user hasn't kept playing
@@ -140,7 +148,6 @@ GameManager.prototype.isGameTerminated = function () {
 GameManager.prototype.setup = function () {
   
   var previousState = this.storageManager.getGameState();
-  
     this.grid        = new Grid(this.size);
     this.score       = 0;
     this.over        = false;
@@ -170,6 +177,7 @@ GameManager.prototype.addRandomTile = function () {
     this.grid.insertTile(tile);
   }
 };
+
 // Sends the updated grid to the actuator
 GameManager.prototype.actuate = function () {
     // Clear the state when the game is over (game over only, not win)

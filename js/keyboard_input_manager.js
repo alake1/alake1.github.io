@@ -132,12 +132,7 @@ KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
   this.emit("restart");
 };
-/*
-KeyboardInputManager.prototype.keepPlaying = function (event) {
-  event.preventDefault();
-  this.emit("keepPlaying");
-};
-*/
+
 KeyboardInputManager.prototype.crowd = function (event) {
   event.preventDefault();
   this.emit("crowd");
