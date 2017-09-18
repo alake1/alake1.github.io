@@ -36,7 +36,7 @@ $("#btna").click(function(){
   $(".timer-container").css('display', 'inline-block');
   $(".best-container").css('display', 'inline-block');
   $(".pause-container").css('display', 'inline-block');
-  $.getScript("https://cdn.rawgit.com/alake1/alake1.github.io/671fc4c8/js/application.js");
+  $.getScript("js/application.js");
 }); 
 
 
