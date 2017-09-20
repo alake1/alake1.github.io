@@ -764,7 +764,7 @@ hr {
   width: auto;
   margin-top: 77px;
   margin-left: -140px;
-  margin-right: 52px;
+  margin-right: 50px;
   color: gray;
   font-weight: bold;
   font-size: 25px;
@@ -871,7 +871,7 @@ hr {
         display: inline-block;
         background: #f888a9;
         border-radius: 3px;
-        padding: 0 20px;
+        padding: 0 15px;
         text-decoration: none;
         color: #3c1b1a;
         height: 40px;
