@@ -95,6 +95,7 @@ function redy(Clock) {
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
+console.log(Clock.totalSeconds);
 if (Clock.totalSeconds>60) {banner.show();}
 };
 
