@@ -1,10 +1,10 @@
-Cocoon.Ad.AdMob.configure({
+/*Cocoon.Ad.AdMob.configure({
 	android: {
 		banner:"ca-app-pub-3940256099942544/6300978111"
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
-
+*/
 document.getElementsByClassName("game-explanation")[0].style.display = 'none';
 function explana() {
      var exp = document.getElementsByClassName("game-explanation");
