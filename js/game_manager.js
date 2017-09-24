@@ -7,6 +7,7 @@ function redy() {
 var banner = Cocoon.Ad.AdMob.createBanner();
 };
 
+document.addEventListener('deviceready', redy, false);
 
 document.getElementsByClassName("game-explanation")[0].style.display = 'none';
 function explana() {
