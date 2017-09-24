@@ -33,7 +33,6 @@ $('.speaker').click(function(){
 })
 $("#btna").click(function(){
   $("#starts").hide();
-  //$(".game-intro").hide();
   $(".grid-start-container").hide();
   $(".grid-container").show();
   $(".game-container").show();
@@ -43,7 +42,6 @@ $("#btna").click(function(){
   $(".timer-container").css('display', 'inline-block');
   $(".best-container").css('display', 'inline-block');
   $(".pause-container").css('display', 'inline-block');
-  // $.getScript("js/application.js");
   window.requestAnimationFrame(function () {
     new GameManager(4, 0, KeyboardInputManager, HTMLActuator, LocalStorageManager);
   });
@@ -97,7 +95,7 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   Clock.start();
 }
 
-if (Clock.totalSeconds>120) {banner.show();}
+//if (Clock.totalSeconds>120) {banner.show();}
 
 var paused = 0;
 if (paused) {
