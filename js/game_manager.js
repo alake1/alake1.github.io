@@ -1,3 +1,10 @@
+Cocoon.Ad.AdMob.configure({
+	android: {
+		banner:"ca-app-pub-3940256099942544/6300978111"
+	}
+});
+var banner = Cocoon.Ad.AdMob.createBanner();
+
 document.getElementsByClassName("game-explanation")[0].style.display = 'none';
 function explana() {
      var exp = document.getElementsByClassName("game-explanation");
@@ -89,7 +96,9 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   screen.style.display = "none";  
   Clock.start();
 }
-        
+
+if (Clock.totalSeconds>120) {banner.show();}
+
 var paused = 0;
 if (paused) {
     screen.style.display = "inherit";
