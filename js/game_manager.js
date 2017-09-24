@@ -1,14 +1,3 @@
-function redy() {
-    Cocoon.Ad.AdMob.configure({
-	android: {
-		banner:"ca-app-pub-3940256099942544/6300978111"
-	}
-});
-var banner = Cocoon.Ad.AdMob.createBanner();
-};
-
-document.addEventListener('deviceready', redy, false);
-
 document.getElementsByClassName("game-explanation")[0].style.display = 'none';
 function explana() {
      var exp = document.getElementsByClassName("game-explanation");
@@ -99,7 +88,17 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   Clock.start();
 }
 
-//if (Clock.totalSeconds>60) {banner.show();}
+function redy(Clock) {
+    Cocoon.Ad.AdMob.configure({
+	android: {
+		banner:"ca-app-pub-3940256099942544/6300978111"
+	}
+});
+var banner = Cocoon.Ad.AdMob.createBanner();
+if (Clock.totalSeconds>60) {banner.show();}
+};
+
+document.addEventListener('deviceready', redy, false);
 
 var paused = 0;
 if (paused) {
