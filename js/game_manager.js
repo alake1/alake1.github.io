@@ -88,15 +88,14 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   Clock.start();
 }
 
-function redy(Clock) {
+function redy() {
     Cocoon.Ad.AdMob.configure({
 	android: {
 		banner:"ca-app-pub-3940256099942544/6300978111"
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
-console.log(Clock.totalSeconds);
-if (Clock.totalSeconds>60) {banner.show();}
+banner.show();
 };
 
 document.addEventListener('deviceready', redy, false);
