@@ -164,7 +164,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementByClassName("mySlides");
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -173,10 +173,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   
 }
-var elems = document.getElementsByClassName("btna");
-var swipa = new Hammer(elems[0]);
+var elems = document.getElementById("option");
+var swipa = new Hammer(elems);
 console.log(elems[0].value);
 swipa.on("swiperight", function() { plusSlides(-1); });
+swipa.on("swipeleft", function() { plusSlides(+1); });
 //$(".btna").on("swipeleft", function() { plusSlides(-1); });
 //$(".btna").on("swiperight", function() { plusSlides(+1); });
 </script>
