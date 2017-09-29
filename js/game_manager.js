@@ -87,7 +87,7 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
   screen.style.display = "none";  
   Clock.start();
 }
-
+/*
 function redy() {
     Cocoon.Ad.AdMob.configure({
 	android: {
@@ -99,7 +99,7 @@ banner.show();
 };
 
 document.addEventListener('deviceready', redy, false);
-
+*/
 var paused = 0;
 if (paused) {
     screen.style.display = "inherit";
