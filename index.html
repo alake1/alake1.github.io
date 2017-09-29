@@ -173,11 +173,13 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   
 }
-var elems = document.getElementById("swip");
-var swipa = new Hammer(elems);
+var elems = document.getElementById("option");
+var swipa = new Hammer.Manager(elems);
 //console.log(elems.value);
-swipa.on("swiperight", function() { plusSlides(-1); });
-swipa.on("swipeleft", function() { plusSlides(+1); });
+var swipe     = new Hammer.Swipe();
+swipa.add(swipe);
+swipa.on('swipeleft', function(){plusSlides(-1)});
+swipa.on("swiperight", function() { plusSlides(+1); });
 //$(".btna").on("swipeleft", function() { plusSlides(-1); });
 //$(".btna").on("swiperight", function() { plusSlides(+1); });
 </script>
