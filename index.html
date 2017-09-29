@@ -175,7 +175,7 @@ function showSlides(n) {
 }
 var elems = document.getElementById("option");
 var swipa = new Hammer(elems);
-console.log(elems[0].value);
+console.log(elems.value);
 swipa.on("swiperight", function() { plusSlides(-1); });
 swipa.on("swipeleft", function() { plusSlides(+1); });
 //$(".btna").on("swipeleft", function() { plusSlides(-1); });
