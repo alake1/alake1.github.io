@@ -9,6 +9,7 @@ html {
 
 body {
   padding: 30px 0px 0px 0px;
+  margin: 0px;
   background-color: #dd673b;
   background-image: url("background.png");
 }
@@ -754,12 +755,14 @@ hr {
     font-weight: bold;
 }
 
+.btn-group {
+    margin-left: 69px;
+    margin-top: 60px;
+}
 .mySlides {
     display: none;
     text-align: center;
     background: gray;
-    margin-left: 69px;
-    margin-top: 60px;
 }
 .prev, .next {
   cursor: pointer;
