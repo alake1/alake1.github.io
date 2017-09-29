@@ -173,14 +173,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   
 }
-var elems = document.getElementById("option");
-var swipa = new Hammer.Manager(elems);
-//console.log(elems.value);
-var swipe     = new Hammer.Swipe();
-swipa.add(swipe);
-swipa.on('swipeleft', function(){plusSlides(-1)});
-swipa.on("swiperight", function() { plusSlides(+1); });
-//$(".btna").on("swipeleft", function() { plusSlides(-1); });
+////$(".btna").on("swipeleft", function() { plusSlides(-1); });
 //$(".btna").on("swiperight", function() { plusSlides(+1); });
 </script>
 <!-- <script type="text/javascript" src="cordova.js"></script> -->
