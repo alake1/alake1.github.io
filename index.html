@@ -59,7 +59,7 @@
   
  <div class="start-screen" id="starts">
  <div class="slideshow-container">
-<div class="btn-group"  data-toggle="buttons">
+<div class="btn-group" id="swip" data-toggle="buttons">
     <div class="mySlides"><button class="btna" id="option" name="level1" value="easy"/>EASY</div>
       <div class="mySlides"><button class="btna" id="option" name="level2"/>MEDIUM</div>
       <div class="mySlides"><button class="btna" id="option" name="level3"/>HARD</div>
@@ -173,9 +173,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   
 }
-var elems = document.getElementById("option");
+var elems = document.getElementById("swip");
 var swipa = new Hammer(elems);
-console.log(elems.value);
+//console.log(elems.value);
 swipa.on("swiperight", function() { plusSlides(-1); });
 swipa.on("swipeleft", function() { plusSlides(+1); });
 //$(".btna").on("swipeleft", function() { plusSlides(-1); });
