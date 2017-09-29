@@ -173,8 +173,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   
 }
-
-var swipa = new Hammer($(".btna"));
+var elems = document.getElementsByClassName("btna");
+var swipa = new Hammer(elems[0]);
 swipa.on("swiperight", function() { plusSlides(-1); });
 //$(".btna").on("swipeleft", function() { plusSlides(-1); });
 //$(".btna").on("swiperight", function() { plusSlides(+1); });
