@@ -96,6 +96,7 @@ function redy() {
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
 banner.show();
+console.log('ready');
 };
 
 document.addEventListener('deviceready', redy, false);
@@ -242,6 +243,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
   this.grid.cells[tile.x][tile.y] = null;
   this.grid.cells[cell.x][cell.y] = tile;
   tile.updatePosition(cell);
+  console.log('move');
   if (audiostatus=='on'){
       getaudio.play();
      // $('.speaker').addClass('speakerplay');
