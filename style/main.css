@@ -3,12 +3,11 @@ html {
   padding: 0;
   background-color: #fff;
   color: #4d2523;
-  /*font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;*/
   font-family: "Helvetica", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  padding: 30px 0px 20px 0px;
+  padding: 10px 0px 40px 0px;
   margin: 0px;
   background-color: #dd673b;
   background-image: url("background.png");
@@ -805,7 +804,6 @@ hr {
     margin-top: 2px; }
   
 .game-container-start {
-    margin-top: 17px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -824,7 +822,6 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
   .game-container {
-    margin-top: 17px;
     display: none;
     position: relative;
     padding: 10px;
