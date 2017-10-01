@@ -8,7 +8,7 @@ html {
   font-size: 18px; }
 
 body {
-  padding: 60px 0px 20px 0px;
+  padding: 30px 0px 20px 0px;
   margin: 0px;
   background-color: #dd673b;
   background-image: url("background.png");
@@ -1118,18 +1118,18 @@ hr {
     font-size: 22px;
 }
 .speaker {
-  left: 230px;
-  height: 20px;
-  width: 20px;
+  left: 210px;
+  height: 30px;
+  width: 30px;
  }
 .speakerplay {
-  height: 20px;
+  height: 30px;
 }
 .qn {
    display: inline-block;
   position: relative;
-  left: 230px;
-  font-size: 22px;
+  left: 210px;
+  font-size: 33px;
 }
 
 .game-intro {
