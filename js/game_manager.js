@@ -95,6 +95,7 @@ function redy() {
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
+banner.load();
 banner.show();
 console.log('ready');
 };
