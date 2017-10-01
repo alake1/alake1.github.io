@@ -95,6 +95,7 @@ function redy() {
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
+banner.setLayout( Cocoon.Ad.BannerLayout.BOTTOM_CENTER );
 banner.load();
 banner.show();
 console.log('ready');
