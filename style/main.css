@@ -249,7 +249,7 @@ strong.important {
 .important:after {
     font-weight: normal;
     text-transform: initial;
-    content: " Use your arrow keys to move the tiles. If two different tiles merge, the weaker tile is replaced by the stronger tile. Similar tiles remain unaffected on meeting."
+    content: " Swipe up, down, left, or right to move the tiles. If two different tiles merge, the weaker tile is replaced by the stronger tile. Similar tiles remain unaffected on meeting."
 }
 
 hr {
@@ -790,13 +790,6 @@ hr {
   
   .heading {
     margin-bottom: 10px; }
-
- .important:after {
-    font-weight: normal;
-    text-transform: initial;
-    content: " Swipe up, down, left, or right to move the tiles. If two different tiles merge, the weaker tile is replaced by the stronger tile. Similar tiles remain unaffected on meeting."
-}
- 
 
   .retry-button {
     padding: 0;
