@@ -91,7 +91,8 @@ function GameManager(size, timer, InputManager, Actuator, StorageManager) {
 function redy() {
     Cocoon.Ad.AdMob.configure({
 	android: {
-		banner:"ca-app-pub-2621371441297616/8677886551"
+		//banner:"ca-app-pub-2621371441297616/8677886551"
+                banner:"ca-app-pub-3940256099942544/6300978111"
 	}
 });
 var banner = Cocoon.Ad.AdMob.createBanner();
